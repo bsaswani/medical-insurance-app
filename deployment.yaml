@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medical-insurance-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: medical-insurance
+  template:
+    metadata:
+      labels:
+        app: medical-insurance
+    spec:
+      containers:
+      - name: medical-insurance-container
+        image: medical-insurance-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000

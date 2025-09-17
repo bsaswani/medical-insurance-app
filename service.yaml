@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: medical-insurance-service
+spec:
+  selector:
+    app: medical-insurance
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: NodePort
