@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: medical-insurance-container
-        image: medical-insurance-app:latest
-        imagePullPolicy: Never
+        image: medical-insurance-app:v1   # <- updated
+        imagePullPolicy: IfNotPresent             # <- keep this
         ports:
         - containerPort: 5000
